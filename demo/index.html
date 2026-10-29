@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoCreate Badging demo</title>
+</head>
+<body>
+    <main>
+        <h1>Set app badge</h1>
+        <p>Set or clear the application icon badge when the browser supports the App Badging API.</p>
+        <button id="set-badge" type="button">Set badge</button>
+        <button id="clear-badge" type="button">Clear badge</button>
+        <output id="status" aria-live="polite"></output>
+        <script type="module">
+            import Badging from "../src/index.js";
+            document.querySelector("#set-badge").addEventListener("click", async () => {
+                try { await Badging.setBadge(1); document.querySelector("#status").textContent = "Badge set"; }
+                catch (error) { document.querySelector("#status").textContent = error.message; }
+            });
+            document.querySelector("#clear-badge").addEventListener("click", async () => {
+                try { await Badging.clearBadge(); document.querySelector("#status").textContent = "Badge cleared"; }
+                catch (error) { document.querySelector("#status").textContent = error.message; }
+            });
+        </script>
+    </main>
+</body>
+</html>
