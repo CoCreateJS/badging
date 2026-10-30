@@ -9,9 +9,15 @@
 <body>
     <main>
         <h1>CoCreate Badging</h1>
-        <p>Browser app badge API helpers.</p>
-        <p>Set or clear the application icon badge when the browser supports the App Badging API.</p>
-        <p>See the demo for a minimal user-gesture example.</p>
+        <p>Set or clear the installed web app's icon badge from JavaScript or CoCreate Actions. Keep the badge tied to unread or other attention-worthy app state.</p>
+        <h2>JavaScript API</h2>
+        <pre><code>await CoCreate.badging.setBadge(3);
+await CoCreate.badging.setBadge(); // dot badge
+await CoCreate.badging.clearBadge();</code></pre>
+        <h2>Actions</h2>
+        <pre><code>&lt;button actions="badging.setBadge(3)"&gt;Set count&lt;/button&gt;
+&lt;button actions="badging.clearBadge"&gt;Clear badge&lt;/button&gt;</code></pre>
+        <p>The API-only entry can also be imported by a service worker, while the main module registers Actions for page declarative use.</p>
     </main>
 </body>
 </html>
