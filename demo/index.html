@@ -7,22 +7,12 @@
 </head>
 <body>
     <main>
-        <h1>Set app badge</h1>
-        <p>Set or clear the application icon badge when the browser supports the App Badging API.</p>
-        <button id="set-badge" type="button">Set badge</button>
-        <button id="clear-badge" type="button">Clear badge</button>
-        <output id="status" aria-live="polite"></output>
-        <script type="module">
-            import Badging from "../src/index.js";
-            document.querySelector("#set-badge").addEventListener("click", async () => {
-                try { await Badging.setBadge(1); document.querySelector("#status").textContent = "Badge set"; }
-                catch (error) { document.querySelector("#status").textContent = error.message; }
-            });
-            document.querySelector("#clear-badge").addEventListener("click", async () => {
-                try { await Badging.clearBadge(); document.querySelector("#status").textContent = "Badge cleared"; }
-                catch (error) { document.querySelector("#status").textContent = error.message; }
-            });
-        </script>
+        <h1>App badge actions</h1>
+        <p>These actions set the installed app icon badge. The app should set or clear it based on its unread state.</p>
+        <button type="button" actions="badging.setBadge(3)">Set badge to 3</button>
+        <button type="button" actions="badging.setBadge">Set dot badge</button>
+        <button type="button" actions="badging.clearBadge">Clear badge</button>
     </main>
+    <script src="../dist/CoCreate-badging.js"></script>
 </body>
 </html>
