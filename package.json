@@ -51,7 +51,7 @@
   "bugs": {
     "url": "https://github.com/CoCreateJS/CoCreate-badging/issues"
   },
-  "homepage": "https://cocreate.app/docs/badging",
+  "homepage": "https://CoCreateJS.com/docs/badging",
   "main": "./src/index.js",
   "dependencies": {
     "@cocreate/actions": "^1.27.0"
