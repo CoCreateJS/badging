@@ -12,31 +12,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "cocreate": {
-    "environment": [
-      "client"
-    ],
-    "interface": {
-      "schemaVersion": 1,
-      "summary": "Browser app badge API helpers.",
-      "source": "src/index.js",
-      "declarative": {
-        "actions": [
-          {
-            "name": "badging"
-          }
-        ]
-      },
-      "api": {
-        "exports": [
-          "clearBadge",
-          "default",
-          "isSupported",
-          "setBadge"
-        ]
-      }
-    }
-  },
   "scripts": {
     "start": "webpack --config webpack.config.js",
     "build": "webpack --mode=production --config webpack.config.js",
