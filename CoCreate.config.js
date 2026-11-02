@@ -11,7 +11,7 @@ module.exports = {
                 path: "/docs/badging",
                 pathname: "/docs/badging/index.html",
                 src: "{{./docs/index.html}}",
-                host: ["cocreate.app", "general.cocreate.app"],
+                host: ["CoCreateJS.com", "general.CoCreateJS.com"],
                 directory: "badging",
                 "content-type": "{{content-type}}",
                 public: "true"
