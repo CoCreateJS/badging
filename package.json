@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreateJS/CoCreate-badging.git"
+    "url": "git+https://github.com/CoCreateJS/badging.git"
   },
   "author": "CoCreate LLC",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/CoCreateJS/CoCreate-badging/issues"
+    "url": "https://github.com/CoCreateJS/badging/issues"
   },
   "homepage": "https://CoCreateJS.com/docs/badging",
   "main": "./src/index.js",
